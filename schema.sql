@@ -18,5 +18,5 @@ CREATE TABLE comments (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
     INDEX (post_id),
-    INDEX (body)
+    INDEX (body(100))
 );
