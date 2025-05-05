@@ -1,6 +1,9 @@
 CREATE DATABASE IF NOT EXISTS blog CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE blog;
 
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS posts;
+
 CREATE TABLE posts (
     id INT PRIMARY KEY,
     user_id INT NOT NULL,
